@@ -35,7 +35,7 @@ const sections = [
 </script>
 
 <template>
-  <div class="border-brandColour2 mx-auto w-[90%] rounded-md border md:mx-0 md:max-w-72">
+  <div class="border-brandColour2 mx-auto w-[90%] self-start rounded-md border md:mx-0 md:max-w-72">
     <div class="border-brandColour2 flex justify-between gap-5 rounded-tl-md rounded-tr-md border-b p-4">
       <h2 class="text-brandColour1 text-lg">Filter Jobs</h2>
       <button aria-expanded="true" type="button" @click="showSections" class="md:hidden">
