@@ -11,7 +11,7 @@
     "dev:server": "nodemon server/index.js",
     "dev:client": "npm run dev --workspace apps/frontend",
     "build": "npm run build --if-present -ws",
-    "start": "cross-env NODE_ENV=production node server",
+    "start": "node server/index.js",
     "test": "node --test"
   },
   "dependencies": {

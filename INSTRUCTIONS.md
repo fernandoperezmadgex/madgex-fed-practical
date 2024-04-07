@@ -1,6 +1,9 @@
 ## How to run de application
 
-On the root directory type npm run dev in your terminal and the package.json will recursively start the server and the vue application for development.
+- First Please make sure your node packages are installed in the root and frontend directories.
+
+- **Development:** On the root directory type npm run dev in your terminal and the package.json will recursively start the server and the vue application for development.
+- **Production:** On the root directory type npm run build in your terminal to create the dist folder in the frontend with all the assests needed + index.html and then type npm run start to start the server. Open a new terminal and move to the frontend directory. Type npm run preview to see the App.
 
 ## Setup
 
