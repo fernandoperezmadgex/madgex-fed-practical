@@ -1,7 +1,7 @@
 <script setup>
 import { computed } from 'vue';
 
-const props = defineProps({ jobs: { type: Array } });
+const props = defineProps({ jobs: { type: Array }, jobCount: { type: Number } });
 const maxSummaryLength = 150;
 
 // Compute a truncated summary for each job
@@ -18,7 +18,7 @@ const truncatedSummaries = computed(() => {
 
 <template>
   <div class="mt-10 w-[100%] lg:w-[60%]">
-    <p class="mb-2 text-xl font-bold lg:text-2xl">{{ `Found ${props.jobs.length} jobs` }}</p>
+    <p class="mb-2 text-xl font-bold lg:text-2xl">{{ `Found ${props.jobCount} jobs` }}</p>
     <div
       class="border-brandColour2 bg-brandColour4 rounded-sm border px-3 pb-3 pt-5"
       v-for="(job, idx) in props.jobs"
