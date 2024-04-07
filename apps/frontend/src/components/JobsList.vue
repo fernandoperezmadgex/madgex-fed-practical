@@ -33,7 +33,7 @@ const truncatedSummaries = computed(() => {
           <li>{{ job.locationDescription }}</li>
           <li>{{ job.salaryDescription }}</li>
         </ul>
-        <img src="/images/job-logo.jpg" class="border-brandColour2 w-[120px] border" />
+        <img src="/images/job-logo.jpg" class="border-brandColour2 w-[120px] border" alt="recruiter logo" />
       </div>
       <p class="mb-3 mt-3 text-sm">{{ truncatedSummaries[idx] }}</p>
       <a

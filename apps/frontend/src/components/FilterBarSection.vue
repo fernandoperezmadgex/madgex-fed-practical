@@ -35,6 +35,7 @@ onMounted(() => {
           :class="{ rotate: isListShowing && initialListShow }"
           src="/images/chevron-right.svg"
           class="mr-3 inline-block w-[8px]"
+          alt="chevron icon"
         />{{ filterSection.name }}
       </span>
     </button>
