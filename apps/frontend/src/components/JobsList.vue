@@ -19,7 +19,11 @@ const truncatedSummaries = computed(() => {
 <template>
   <div class="mt-10 w-[100%] lg:w-[60%]">
     <p class="mb-2 font-bold md:text-xl">Found 105 jobs</p>
-    <div class="border-brandColour2 rounded-sm border px-3 pb-3 pt-5" v-for="(job, idx) in props.jobs" :key="idx">
+    <div
+      class="border-brandColour2 bg-brandColour4 rounded-sm border px-3 pb-3 pt-5"
+      v-for="(job, idx) in props.jobs"
+      :key="idx"
+    >
       <h3>
         <a href="#" class="text-brandColour1 font-bold hover:underline">{{ job.title }}</a>
       </h3>
@@ -32,11 +36,11 @@ const truncatedSummaries = computed(() => {
         <img src="/images/job-logo.jpg" class="border-brandColour2 w-[120px] border" />
       </div>
       <p class="mb-3 mt-3 text-sm">{{ truncatedSummaries[idx] }}</p>
-      <button
-        class="border-brandColour2 rounded-sm border px-3 py-2 text-sm transition duration-500 hover:bg-[#000] hover:text-[#fff]"
+      <a
+        class="border-brandColour2 inline-block rounded-sm border px-3 py-2 text-sm transition duration-500 hover:cursor-pointer hover:bg-[#000] hover:text-[#fff]"
       >
         View details
-      </button>
+      </a>
     </div>
   </div>
 </template>
