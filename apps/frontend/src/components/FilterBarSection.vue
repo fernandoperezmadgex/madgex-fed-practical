@@ -29,7 +29,7 @@ onMounted(() => {
 
 <template>
   <h3 class="text-brandColour1 mb-3" @click="showList()">
-    <button aria-expanded="true" type="button">
+    <button aria-expanded="true" type="button" aria-controls="filterList">
       <span class="flex items-center">
         <img
           :class="{ rotate: isListShowing && initialListShow }"
@@ -40,7 +40,7 @@ onMounted(() => {
       </span>
     </button>
   </h3>
-  <ul class="mb-5" :class="{ hidden: !isListShowing || !initialListShow }">
+  <ul id="filterList" role="list" class="mb-5" :class="{ hidden: !isListShowing || !initialListShow }">
     <li v-for="(term, idx) in filterSection.terms.slice(0, listLength)" :key="idx" class="text-brandColour1 mt-1">
       <a href="#" class="text-brandColour1 hover:underline"
         >{{ term.names[0].value }} <span class="text-sm text-[#6B7280]">{{ `(${term.count})` }}</span></a

@@ -35,7 +35,10 @@ const sections = [
 </script>
 
 <template>
-  <div class="border-brandColour2 bg-brandColour4 mx-auto self-start rounded-md border md:mx-0 md:max-w-72">
+  <nav
+    aria-label="Filter Jobs"
+    class="border-brandColour2 bg-brandColour4 mx-auto self-start rounded-md border md:mx-0 md:max-w-72"
+  >
     <div class="border-brandColour2 flex justify-between gap-5 rounded-tl-md rounded-tr-md border-b p-4">
       <h2 class="text-brandColour1 text-lg">Filter Jobs</h2>
       <button aria-expanded="true" type="button" @click="showSections" role="button" class="md:hidden">
@@ -50,5 +53,5 @@ const sections = [
         </li>
       </ul>
     </div>
-  </div>
+  </nav>
 </template>
