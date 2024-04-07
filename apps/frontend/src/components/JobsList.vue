@@ -1,5 +1,19 @@
 <script setup>
-const props = defineProps({ jobs: { type: Object } });
+import { computed } from 'vue';
+
+const props = defineProps({ jobs: { type: Array } });
+const maxSummaryLength = 150;
+
+// Compute a truncated summary for each job
+const truncatedSummaries = computed(() => {
+  return props.jobs.map((job) => {
+    if (job.summary.length > maxSummaryLength) {
+      return job.summary.slice(0, maxSummaryLength) + '...';
+    } else {
+      return job.summary;
+    }
+  });
+});
 </script>
 
 <template>
@@ -17,7 +31,7 @@ const props = defineProps({ jobs: { type: Object } });
         </ul>
         <img src="/images/job-logo.jpg" class="border-brandColour2 w-[120px] border" />
       </div>
-      <p class="mb-3 mt-3 text-sm">{{ job.summary }}</p>
+      <p class="mb-3 mt-3 text-sm">{{ truncatedSummaries[idx] }}</p>
       <button
         class="border-brandColour2 rounded-sm border px-3 py-2 text-sm transition duration-500 hover:bg-[#000] hover:text-[#fff]"
       >

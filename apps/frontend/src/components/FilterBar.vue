@@ -2,7 +2,7 @@
 import { ref } from 'vue';
 import FilterBarSection from '@/components/FilterBarSection.vue';
 
-const props = defineProps({ taxonomy: { type: Object } });
+const props = defineProps({ taxonomy: { type: Array } });
 const isSectionsShowing = ref(false);
 
 const showSections = () => {

@@ -1,7 +1,7 @@
 <script setup>
 import { ref, onMounted } from 'vue';
 
-const props = defineProps({ section: { type: Object } });
+const props = defineProps({ section: { type: Array } });
 const listLength = ref(11);
 const isListShowing = ref(true);
 const maximumInitialListLength = 11;
