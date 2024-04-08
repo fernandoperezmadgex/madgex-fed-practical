@@ -41,7 +41,13 @@ const sections = [
   >
     <div class="border-brandColour2 flex justify-between gap-5 rounded-tl-md rounded-tr-md border-b p-4">
       <h2 class="text-brandColour1 text-lg">Filter Jobs</h2>
-      <button aria-expanded="true" type="button" @click="showSections" role="button" class="md:hidden">
+      <button
+        :aria-expanded="isSectionsShowing ? 'true' : 'false'"
+        type="button"
+        @click="showSections"
+        role="button"
+        class="md:hidden"
+      >
         <img src="/images/filter-icon.svg" class="w-5" alt="filter button" />
       </button>
     </div>

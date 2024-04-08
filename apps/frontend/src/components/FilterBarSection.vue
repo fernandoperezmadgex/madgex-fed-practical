@@ -29,7 +29,11 @@ onMounted(() => {
 
 <template>
   <h3 class="text-brandColour1 mb-3" @click="showList()">
-    <button aria-expanded="true" type="button" aria-controls="filterList">
+    <button
+      :aria-expanded="isListShowing && initialListShow ? 'true' : 'false'"
+      type="button"
+      aria-controls="filterList"
+    >
       <span class="flex items-center">
         <img
           :class="{ rotate: isListShowing && initialListShow }"
@@ -50,7 +54,7 @@ onMounted(() => {
       @click="increaseList(filterSection.terms.length)"
       v-if="listLength === maximumInitialListLength && filterSection.terms.length > maximumInitialListLength"
     >
-      <button aria-expanded="true" type="button">
+      <button aria-expanded="false" type="button">
         <span class="text-brandColour1 hover:text-underline mt-6 block hover:cursor-pointer">More...</span>
       </button>
     </li>
