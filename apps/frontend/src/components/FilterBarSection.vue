@@ -44,7 +44,7 @@ onMounted(() => {
       </span>
     </button>
   </h3>
-  <ul id="filterList" role="list" class="mb-5" :class="{ hidden: !isListShowing || !initialListShow }">
+  <ul role="list" class="mb-5" :class="{ hidden: !isListShowing || !initialListShow }">
     <li v-for="(term, idx) in filterSection.terms.slice(0, listLength)" :key="idx" class="text-brandColour1 mt-1">
       <a href="#" class="text-brandColour1 hover:underline"
         >{{ term.names[0].value }} <span class="text-sm text-[#6B7280]">{{ `(${term.count})` }}</span></a
