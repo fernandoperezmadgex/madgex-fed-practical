@@ -48,16 +48,14 @@ const sections = [
         role="button"
         class="md:hidden"
       >
-        <img src="/images/filter-icon.svg" class="w-5" alt="filter button" />
+        <img src="/images/filter-icon.svg" class="w-5" alt="filter button" aria-label="Opens filter nav" />
       </button>
     </div>
 
-    <div :class="{ 'hidden md:block': !isSectionsShowing }">
-      <ul class="border-brandColour2 border-b border-t px-8 pb-2 pt-5" v-for="(section, idx) in sections" :key="idx">
-        <li>
-          <FilterBarSection :section="section" />
-        </li>
-      </ul>
-    </div>
+    <ul :class="{ 'hidden md:block': !isSectionsShowing }">
+      <li class="border-brandColour2 border-b border-t px-8 pb-2 pt-5" v-for="(section, idx) in sections" :key="idx">
+        <FilterBarSection :section="section" />
+      </li>
+    </ul>
   </nav>
 </template>
