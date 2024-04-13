@@ -19,9 +19,17 @@ fetchData('api/jobs'); // No need to use onMounted hook in setup
   <div v-else>
     <MainHeader />
     <main role="main" class="mx-auto w-[90%] max-w-[1400px] md:flex md:gap-8">
-      <FilterBar :taxonomy="taxonomy" />
-      <JobsList :jobs="jobs" :jobCount="jobCount" />
-      <Banner class="mt-0 hidden h-[600px] w-40 self-start lg:block" />
+      <aside>
+        <FilterBar :taxonomy="taxonomy" />
+      </aside>
+      <article>
+        <section>
+          <JobsList :jobs="jobs" :jobCount="jobCount" />
+        </section>
+      </article>
+      <section role="banner" aria-label="Advertisement">
+        <Banner class="mt-0 hidden h-[600px] w-40 self-start lg:block" />
+      </section>
     </main>
     <MainFooter />
   </div>

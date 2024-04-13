@@ -17,7 +17,7 @@ const truncatedSummaries = computed(() => {
 </script>
 
 <template>
-  <section class="mt-10 w-[100%] lg:w-[60%]" role="region">
+  <div class="mt-10 w-[100%]">
     <h2 class="mb-2 text-xl font-bold lg:text-2xl">{{ `Found ${props.jobCount} jobs` }}</h2>
     <div
       class="border-brandColour2 bg-brandColour4 rounded-sm border px-3 pb-3 pt-5"
@@ -47,5 +47,5 @@ const truncatedSummaries = computed(() => {
         View details
       </a>
     </div>
-  </section>
+  </div>
 </template>
